@@ -46,17 +46,26 @@ nav{
 .two{
   height: 100%;
   background-color: #cd5c5c;
+  display: flex;
   section{
-    display: flex;
+    justify-content: space-around;
+    width: 90%;
     padding: 2%;
-    width: 100%;
     margin-top:20px;
-
-    height: 700px;
-    img{
-      width: 70%;
-      height: 70%;
+    display: flex;
+    // flex-wrap: wrap;
+    img:first-of-type{
+      @include size (50%);
     }
+    img:nth-of-type(2){
+      @include size (20%);
+      align-self: flex-end;
+    }
+    img:nth-of-type(3){
+      @include size (12%);
+      align-self: flex-end;
+    }
+
   }
 
   h1{
@@ -69,21 +78,4 @@ nav{
   p{
     text-align: center;
   }
-}
-
-section.a img{
-  background-image: url(../img/homedecor.png);
-  background-size:cover;
-}
-section.b{
-  background-image: url(../img/campsite.png);
-  background-size: cover;
-}
-section.c{
-  background-image: url(../img/plato1.png);
-  background-size: cover;
-}
-section.de{
-  background-image: url(../img/albums.png);
-  background-size: cover;
 }
