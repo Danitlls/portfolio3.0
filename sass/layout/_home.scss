@@ -1,0 +1,35 @@
+main {
+  display:flex;
+  flex-direction: column;
+  width: 98vw;
+  height: 98vh;
+  background-color: salmon;
+  padding: 1%;
+  header{
+    // border: 1px solid red;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  section {
+    // border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // height: 100%;
+    padding-top: 150px;
+  }
+}
+nav{
+  display: none;
+  width: 80%;
+  background-color: white;
+  .links{
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+main.two{
+  background-color: green;
+}

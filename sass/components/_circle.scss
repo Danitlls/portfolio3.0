@@ -1,0 +1,56 @@
+#d {
+  width: 200px;
+  height: 200px;
+  background-color: coral;
+  opacity: 0;
+  animation: square-to-circle 2s .5s  cubic-bezier(1,.015,.295,1.225) alternate;
+  animation-fill-mode: forwards;
+}
+
+@keyframes square-to-circle {
+  0%  {
+    opacity: .6;
+    border-radius:50%;
+    background:coral;
+    transform:rotate(0deg);
+  }
+  25%  {
+    opacity: .8;
+    border-radius:50%;
+    background:darksalmon;
+    transform:rotate(180deg);
+  }
+  50%  {
+    opacity: 1;
+    border-radius:50% 50% 50% 0;
+    background:lightcoral;
+    transform:rotate(135deg);
+  }
+  75%  {
+    opacity: 1;
+    border-radius:50% 0 0 0;
+    background:darksalmon;
+    transform:rotate(45deg);
+  }
+  100% {
+    opacity: 1;
+    border-radius:50% 50% 0 0;
+    background:indianred;
+    transform:rotate(90deg);
+  }
+}
+
+.name{
+  opacity: 0;
+  padding-top: 100px;
+  padding-left: 300px;
+  animation: showName .5s 3s;
+  animation-fill-mode: forwards;
+
+}
+@keyframes showName {
+  100%{
+    opacity: 1;
+    padding-left: 10px;
+  }
+}
