@@ -1,6 +1,8 @@
-#d {
-  width: 200px;
-  height: 200px;
+.d {
+  margin-top: 100px;
+  width: 150px;
+  height: 150px;
+  padding-left: 1%;
   background-color: coral;
   opacity: 0;
   animation: square-to-circle 2s .5s  cubic-bezier(1,.015,.295,1.225) alternate;
@@ -41,16 +43,21 @@
 }
 
 .name{
+  font-size: 30px;
+  color: grey;
   opacity: 0;
-  padding-top: 100px;
-  padding-left: 300px;
+  padding-top: 180px;
+  padding-left: 70px;
   animation: showName .5s 3s;
   animation-fill-mode: forwards;
 
 }
 @keyframes showName {
+  50%{
+    opacity: .3;
+  }
   100%{
     opacity: 1;
-    padding-left: 10px;
+    padding-left: 5px;
   }
 }

@@ -475,9 +475,11 @@ template {
   transform: translateY(-13px) rotate(90deg);
 }
 
-#d {
-  width: 200px;
-  height: 200px;
+.d {
+  margin-top: 100px;
+  width: 150px;
+  height: 150px;
+  padding-left: 1%;
   background-color: coral;
   opacity: 0;
   animation: square-to-circle 2s 0.5s cubic-bezier(1, 0.015, 0.295, 1.225) alternate;
@@ -517,28 +519,35 @@ template {
   }
 }
 .name {
+  font-size: 30px;
+  color: grey;
   opacity: 0;
-  padding-top: 100px;
-  padding-left: 300px;
+  padding-top: 180px;
+  padding-left: 70px;
   animation: showName .5s 3s;
   animation-fill-mode: forwards;
 }
 
 @keyframes showName {
+  50% {
+    opacity: .3;
+  }
   100% {
     opacity: 1;
-    padding-left: 10px;
+    padding-left: 5px;
   }
 }
 main {
   display: flex;
   flex-direction: column;
-  width: 98vw;
-  height: 98vh;
-  background-color: salmon;
+  width: 100%;
+  height: 100vh;
+  background-color: lightblue;
   padding: 1%;
 }
 main header {
+  position: fixed;
+  right: 20px;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
@@ -552,16 +561,68 @@ main section {
 
 nav {
   display: none;
-  width: 80%;
-  background-color: white;
+  position: absolute;
+  top: 80px;
+  width: 85vw;
+  background-color: #eaf1f3;
 }
 nav .links {
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+nav .links li {
+  text-align: center;
+  padding: 10px auto;
+  border-bottom: 1px solid lightblue;
+  margin: 10px;
 }
 
-main.two {
-  background-color: green;
+.two {
+  height: 100%;
+  background-color: #cd5c5c;
+}
+.two section {
+  display: flex;
+  padding: 2%;
+  width: 100%;
+  margin-top: 20px;
+  height: 700px;
+}
+.two section img {
+  width: 70%;
+  height: 70%;
+}
+.two h1 {
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+  color: lightblue;
+}
+.two p {
+  text-align: center;
+}
+
+section.a img {
+  background-image: url(../img/homedecor.png);
+  background-size: cover;
+}
+
+section.b {
+  background-image: url(../img/campsite.png);
+  background-size: cover;
+}
+
+section.c {
+  background-image: url(../img/plato1.png);
+  background-size: cover;
+}
+
+section.de {
+  background-image: url(../img/albums.png);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=main.css.map */
