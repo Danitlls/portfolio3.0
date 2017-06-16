@@ -41,12 +41,13 @@ nav{
       padding: 10px auto;
       border-bottom: 1px solid lightblue;
         margin: 10px;
+      z-index: 1000;
     }
   }
 }
 
 .two{
-  height: 100vh;
+  height: 50vh;
 
   background-color: #cd5c5c;
   display: flex;
