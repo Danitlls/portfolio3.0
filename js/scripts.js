@@ -3,4 +3,5 @@ $(document).ready(function(){
     $("nav").toggle(800);
     $(this).toggleClass("is-active");
   });
+  // $(".intro").toggleUp(800);
 });
