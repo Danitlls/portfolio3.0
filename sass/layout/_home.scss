@@ -1,48 +1,57 @@
 header{
   position: fixed;
-  right: 20px;
+  right: 15px;
   // border: 1px solid red;
   display: flex;
   justify-content: flex-end;
   padding: 10px;
 }
 
-main {
-  display:flex;
-  flex-direction: column;
-  width: 100%;
-
-  background-color: lightblue;
-  padding: 1%;
-
-  section {
-    // border: 1px solid blue;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    // height: 100%;
-    padding-top: 150px;
-  }
-}
 nav{
   display: none;
   position: absolute;
-  top: 80px;
-  width: 85vw;
-
-  background-color: #eaf1f3;
+  top: 5px;
+  width: 87vw;
+  margin-left: 10px;
+  background-color: grey;
   .links{
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: wrap;
+    position: relative;
     li{
+      position: relative;
       text-align: center;
-      padding: 10px auto;
+      padding: 5px auto;
       border-bottom: 1px solid lightblue;
-        margin: 10px;
-      z-index: 1000;
+      margin: 10px;
     }
+    li:first-of-type{
+      padding-top: 10px;
+    }
+    li:last-of-type{
+      border-bottom: none;
+      padding-bottom: -5px;
+    }
+  }
+}
+
+
+main {
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #03a9f4;
+
+  padding: 1%;
+  section {
+    border: 1px solid blue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    // height: 100%;
+    padding-top: 150px;
   }
 }
 

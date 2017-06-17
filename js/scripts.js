@@ -8,9 +8,9 @@ $(document).ready(function(){
 
 
 // Hook doAnimations on scroll, and trigger a scroll
-$(window).on('scroll', function(){
-  $(".block1").removeClass("animatable").addClass("animated");
-  $(window).trigger('scroll');
-
-});
+// $(window).on('scroll', function(){
+//   $(".block1").removeClass("animatable").addClass("animated");
+//   $(window).trigger('scroll');
+//
+// });
 });
