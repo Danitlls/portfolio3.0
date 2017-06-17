@@ -477,16 +477,14 @@ template {
 
 .intro {
   height: 100vh;
-  animation: hideIntro .6s 4s;
-  animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
   padding-left: 10px;
   border: 2px solid white;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
+  background: red url("../img/background.jpg") no-repeat scroll bottom;
   background-size: cover;
-  background-position: bottom;
+  animation: hideIntro .7s 3.2s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes hideIntro {
@@ -500,7 +498,7 @@ template {
   margin-top: 250px;
   background-color: coral;
   opacity: 0;
-  animation: square-to-circle 2s 0.6s cubic-bezier(1, 0.015, 0.295, 1.225) alternate;
+  animation: square-to-circle 2s 0.7s cubic-bezier(1, 0.015, 0.295, 1.225) alternate;
   animation-fill-mode: forwards;
 }
 
@@ -517,7 +515,7 @@ template {
     background: darksalmon;
     transform: rotate(180deg);
   }
-  50% {
+  45% {
     opacity: 1;
     border-radius: 50% 50% 50% 0;
     background: lightcoral;
@@ -530,6 +528,7 @@ template {
     transform: rotate(45deg);
   }
   100% {
+    margin-left: 20px;
     opacity: 1;
     border-radius: 50% 50% 0 0;
     background: #f9e879;
@@ -537,25 +536,29 @@ template {
   }
 }
 .name {
+  position: relative;
+  top: 5px;
   font-size: 20px;
   color: #ecf0f1;
   opacity: 0;
-  margin-top: 110px;
-  padding-top: 5px;
-  padding-left: 70px;
   animation: showName .5s 3s;
   animation-fill-mode: forwards;
-  position: relative;
   text-shadow: 1px 1px 2px grey;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-transform: uppercase;
 }
 
 @keyframes showName {
+  0% {
+    margin-top: -100px;
+  }
   50% {
+    display: none;
     opacity: .3;
   }
   100% {
+    margin-top: 110px;
+    display: inline-block;
     opacity: 1;
     padding-left: 5px;
   }
@@ -645,50 +648,43 @@ main {
   width: 100%;
   background-color: #03a9f4;
   padding: 1%;
+  height: 100%;
 }
 main section {
-  border: 1px solid blue;
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: 150px;
-}
-
-.two {
-  height: 50vh;
-  background-color: #cd5c5c;
-  display: flex;
-}
-.two section {
-  justify-content: space-around;
-  width: 90%;
+  width: 98vw;
   padding: 2%;
-  margin-top: 20px;
-  display: flex;
+  margin-top: 25px;
   flex-wrap: wrap;
+  height: 350px;
 }
-.two section img:first-of-type {
-  height: 50%;
-  width: 50%;
+main section img {
+  padding: 2%;
 }
-.two section img:nth-of-type(2) {
-  height: 20%;
-  width: 20%;
+main section img:first-of-type {
+  height: 80%;
+  width: 80%;
+}
+main section img:nth-of-type(2) {
+  height: 40%;
+  width: 40%;
   align-self: flex-end;
 }
-.two section img:nth-of-type(3) {
-  height: 12%;
-  width: 12%;
+main section img:nth-of-type(3) {
+  height: 25%;
+  width: 25%;
   align-self: flex-end;
 }
-.two h1 {
+main h1 {
   text-transform: uppercase;
   font-size: 15px;
   text-align: left;
   padding-left: 10px;
   color: lightblue;
 }
-.two p {
+main p {
   text-align: center;
 }
 

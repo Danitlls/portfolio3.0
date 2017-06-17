@@ -1,15 +1,13 @@
 .intro{
   height: 100vh;
-  animation: hideIntro .6s 4s;
-  animation-fill-mode: forwards;
   display: flex;
   justify-content: center;
   padding-left: 10px;
   border: 2px solid white;
-  background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
+  background: red url("../img/background.jpg") no-repeat scroll bottom;
   background-size: cover;
-  background-position: bottom;
+  animation: hideIntro .7s 3.2s;
+  animation-fill-mode: forwards;
 }
 @keyframes hideIntro {
   100%{
@@ -20,17 +18,14 @@
 .d {
   @include size(140px);
   margin-top: 250px;
-  // margin-left: 5px;
-  // padding-left: 2%;
   background-color: coral;
   opacity: 0;
-  animation: square-to-circle 2s .6s  cubic-bezier(1,.015,.295,1.225) alternate;
+  animation: square-to-circle 2s .7s  cubic-bezier(1,.015,.295,1.225) alternate;
   animation-fill-mode: forwards;
 }
 
 @keyframes square-to-circle {
   0%  {
-
     opacity: .6;
     border-radius:50%;
     background:coral;
@@ -42,7 +37,7 @@
     background:darksalmon;
     transform:rotate(180deg);
   }
-  50%  {
+  45%  {
     opacity: 1;
     border-radius:50% 50% 50% 0;
     background:lightcoral;
@@ -55,9 +50,10 @@
     transform:rotate(45deg);
   }
   100% {
+    margin-left: 20px;
     opacity: 1;
     border-radius:50% 50% 0 0;
-    background:#f9e879;
+    background:$color-accent;
     transform:rotate(90deg) translateX(-200px);
   }
 
@@ -65,25 +61,28 @@
 }
 
 .name{
+  @include position(relative, 5px null null null );
   font-size: 20px;
-  color: #ecf0f1;
+  color: $font-color-secondary;
   opacity: 0;
-  margin-top: 110px;
-  padding-top: 5px;
-  padding-left: 70px;
   animation: showName .5s 3s;
   animation-fill-mode: forwards;
-  position: relative;
   text-shadow: 1px 1px 2px grey;
-  font-family: 'Poppins', sans-serif;
+  font-family: $font-main, sans-serif;
   text-transform: uppercase;
 
 }
 @keyframes showName {
+  0%{
+    margin-top: -100px;
+  }
   50%{
+    display: none;
     opacity: .3;
   }
   100%{
+    margin-top: 110px;
+    display:inline-block;
     opacity: 1;
     padding-left: 5px;
     // z-index: -1;
