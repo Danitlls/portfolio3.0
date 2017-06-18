@@ -1,41 +1,4 @@
-header{
-  position: fixed;
-  right: 15px;
-  // border: 1px solid red;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-}
 
-nav{
-  display: none;
-  position: absolute;
-  top: 5px;
-  width: 87vw;
-  margin-left: 10px;
-  background-color: grey;
-  .links{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    flex-wrap: wrap;
-    position: relative;
-    li{
-      position: relative;
-      text-align: center;
-      padding: 5px auto;
-      border-bottom: 1px solid lightblue;
-      margin: 10px;
-    }
-    li:first-of-type{
-      padding-top: 10px;
-    }
-    li:last-of-type{
-      border-bottom: none;
-      padding-bottom: -5px;
-    }
-  }
-}
 
 
 main {
@@ -50,8 +13,7 @@ main {
     display: flex;
     justify-content: center;
     align-content: center;
-
-    width: 98vw;
+    width: 95vw;
     padding: 2%;
     margin-top:25px;
     flex-wrap: wrap;

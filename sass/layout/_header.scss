@@ -1,0 +1,31 @@
+header{
+  position: fixed;
+  width: 100vw;
+  right: 5px;
+  // border: 1px solid red;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  z-index: 100;
+  align-items:flex-start;
+}
+nav{
+  display: none;
+  top: 1px;
+  width: 95%;
+  margin: 0 15px;
+  .links{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li{
+      background-color: rgba(247, 239, 190, 0.8);
+      width: 100%;
+      border-bottom: 1px solid $color-accent;
+      text-align: center;
+      padding: 10px 0;
+      margin-left: 10px;
+    }
+  }
+}

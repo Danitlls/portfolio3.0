@@ -8,6 +8,9 @@
   background-size: cover;
   animation: hideIntro .7s 3.2s;
   animation-fill-mode: forwards;
+  &:first-child{
+    opacity: .99;
+  }
 }
 @keyframes hideIntro {
   100%{
@@ -16,7 +19,8 @@
 }
 
 .d {
-  @include size(140px);
+  @include size(155px);
+
   margin-top: 250px;
   background-color: coral;
   opacity: 0;
@@ -50,11 +54,13 @@
     transform:rotate(45deg);
   }
   100% {
-    margin-left: 20px;
-    opacity: 1;
+    margin-left: 0px;
+    opacity: .99;
     border-radius:50% 50% 0 0;
     background:$color-accent;
     transform:rotate(90deg) translateX(-200px);
+
+
   }
 
 
@@ -85,6 +91,6 @@
     display:inline-block;
     opacity: 1;
     padding-left: 5px;
-    // z-index: -1;
+    position:static;
   }
 }

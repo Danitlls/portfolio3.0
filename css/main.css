@@ -428,9 +428,9 @@ template {
   background-color: #fff4ad;
   display: block;
   margin: 8px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .hamburger:hover {
@@ -486,6 +486,9 @@ template {
   animation: hideIntro .7s 3.2s;
   animation-fill-mode: forwards;
 }
+.intro:first-child {
+  opacity: .99;
+}
 
 @keyframes hideIntro {
   100% {
@@ -493,8 +496,8 @@ template {
   }
 }
 .d {
-  height: 140px;
-  width: 140px;
+  height: 155px;
+  width: 155px;
   margin-top: 250px;
   background-color: coral;
   opacity: 0;
@@ -528,8 +531,8 @@ template {
     transform: rotate(45deg);
   }
   100% {
-    margin-left: 20px;
-    opacity: 1;
+    margin-left: 0px;
+    opacity: .99;
     border-radius: 50% 50% 0 0;
     background: #f9e879;
     transform: rotate(90deg) translateX(-200px);
@@ -561,6 +564,7 @@ template {
     display: inline-block;
     opacity: 1;
     padding-left: 5px;
+    position: static;
   }
 }
 .block1 {
@@ -604,44 +608,6 @@ template {
   animation-name: fadeInUp;
 }
 
-header {
-  position: fixed;
-  right: 15px;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px;
-}
-
-nav {
-  display: none;
-  position: absolute;
-  top: 5px;
-  width: 87vw;
-  margin-left: 10px;
-  background-color: grey;
-}
-nav .links {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: relative;
-}
-nav .links li {
-  position: relative;
-  text-align: center;
-  padding: 5px auto;
-  border-bottom: 1px solid lightblue;
-  margin: 10px;
-}
-nav .links li:first-of-type {
-  padding-top: 10px;
-}
-nav .links li:last-of-type {
-  border-bottom: none;
-  padding-bottom: -5px;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -654,7 +620,7 @@ main section {
   display: flex;
   justify-content: center;
   align-content: center;
-  width: 98vw;
+  width: 95vw;
   padding: 2%;
   margin-top: 25px;
   flex-wrap: wrap;
@@ -686,6 +652,38 @@ main h1 {
 }
 main p {
   text-align: center;
+}
+
+header {
+  position: fixed;
+  width: 100vw;
+  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  z-index: 100;
+  align-items: flex-start;
+}
+
+nav {
+  display: none;
+  top: 1px;
+  width: 95%;
+  margin: 0 15px;
+}
+nav .links {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+nav .links li {
+  background-color: rgba(247, 239, 190, 0.8);
+  width: 100%;
+  border-bottom: 1px solid #f9e879;
+  text-align: center;
+  padding: 10px 0;
+  margin-left: 10px;
 }
 
 /*# sourceMappingURL=main.css.map */
