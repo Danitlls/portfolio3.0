@@ -428,6 +428,7 @@ template {
   background-color: #fff4ad;
   display: block;
   margin: 8px auto;
+  box-shadow: 2px 1px 2px lightgrey;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -481,7 +482,7 @@ template {
   justify-content: center;
   padding-left: 10px;
   border: 2px solid white;
-  background: red url("../img/background.jpg") no-repeat scroll bottom;
+  background: white url("../img/background.jpg") no-repeat scroll bottom;
   background-size: cover;
   animation: hideIntro .7s 3.2s;
   animation-fill-mode: forwards;
@@ -608,50 +609,75 @@ template {
   animation-name: fadeInUp;
 }
 
+body {
+  background-color: #dde3ed;
+}
+
+a {
+  color: black;
+  font-family: "Poppins";
+}
+a:focus {
+  color: grey;
+}
+
 main {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  background-color: #03a9f4;
-  padding: 1%;
+  width: 96vw;
+  background-color: #dde3ed;
+  padding: 2%;
   height: 100%;
+  justify-content: center;
+  align-content: center;
+}
+main a {
+  color: hotpink;
 }
 main section {
   display: flex;
+  padding: 1%;
+  margin-bottom: 35px;
+  width: 93vw;
   justify-content: center;
-  align-content: center;
-  width: 95vw;
-  padding: 2%;
-  margin-top: 25px;
   flex-wrap: wrap;
-  height: 350px;
 }
 main section img {
   padding: 2%;
+  transition: transform 1s;
+}
+main section img:hover {
+  transform: scale(1.5);
 }
 main section img:first-of-type {
-  height: 80%;
-  width: 80%;
+  width: 300px;
+  height: 200px;
+  align-self: flex-end;
 }
 main section img:nth-of-type(2) {
-  height: 40%;
-  width: 40%;
+  width: 90px;
+  height: 170px;
   align-self: flex-end;
 }
 main section img:nth-of-type(3) {
-  height: 25%;
-  width: 25%;
+  width: 180px;
+  height: 130px;
   align-self: flex-end;
 }
-main h1 {
-  text-transform: uppercase;
-  font-size: 15px;
-  text-align: left;
-  padding-left: 10px;
-  color: lightblue;
-}
-main p {
+
+p {
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+  padding-top: 20px;
+  color: hotpink;
+}
+
+footer {
+  text-align: center;
+  color: grey;
 }
 
 header {
@@ -678,12 +704,20 @@ nav .links {
   flex-wrap: wrap;
 }
 nav .links li {
-  background-color: rgba(247, 239, 190, 0.8);
+  background-color: rgba(247, 239, 190, 0.9);
   width: 100%;
   border-bottom: 1px solid #f9e879;
   text-align: center;
   padding: 10px 0;
   margin-left: 10px;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+  color: lightblue;
 }
 
 /*# sourceMappingURL=main.css.map */
