@@ -28,7 +28,7 @@
 * JS
 
 ### Github Pages link
-[Portfolio Page](https://danitlls.github.io/Portfolio3.0/)
+[Portfolio Page](http://rawgit.com/danitlls/portfolio3.0/master/index.html/)
 
 
 ## License
