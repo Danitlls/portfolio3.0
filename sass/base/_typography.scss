@@ -1,0 +1,20 @@
+*{
+  font-family: sans-serif;
+}
+// fonts/Champagne & Limousines.ttf
+
+
+
+@mixin fontFace-headers($family, $style: normal,$weight: normal) {
+	@font-face {
+		font-family: $family;
+		src: url('c-and-l-bold.ttf') format('truetype');
+    //  url('.eot?#iefix') format('embedded-opentype'), // IE8 and below
+			// url('.woff') format('woff'), // standards
+			// Safari, Android, iOS
+			// url('#{$src}.svg##{$family}') format('svg'); // legacy iOS
+
+		font-style: $style;
+		font-weight: $weight;
+	}
+}

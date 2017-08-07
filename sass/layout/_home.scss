@@ -1,0 +1,82 @@
+// @import 'fontface';
+
+body{
+  background-color: $color-primary;
+}
+a{
+  @include fontFace-headers($family,$style: normal,$weight: bold);
+  color: $color-dark;
+  font-size: 20px;
+  &:focus{
+    color: grey;
+  }
+  &:hover{
+    color: $color-bright;
+  }
+}
+
+//main section ----------------------------
+main {
+  display:flex;
+  flex-direction: column;
+  width: 96vw;
+  background-color:$color-primary;
+  padding: 2%;
+  height: 100%;
+  justify-content: center;
+  align-content: center;
+  a{
+    color: #ff7f50;
+  }
+//Each section contains the images of each project----
+  section {
+    display: flex;
+    padding: 1%;
+    margin-bottom:35px;
+    width: 93vw;
+    justify-content: center;
+    flex-wrap: wrap;
+    img{
+      padding: 2%;
+      transition: transform 1s;
+      &:hover{
+        transform: scale(1.5);
+      }
+    }
+// Image laptop --------
+    img:first-of-type{
+      width:300px;
+      height: 200px;
+      align-self: flex-end;
+
+    }
+// Image phone --------
+    img:nth-of-type(2){
+      width:90px;
+      height: 170px;
+      align-self: flex-end;
+    }
+// Image tablet --------
+    img:nth-of-type(3){
+      width:180px;
+      height: 130px;
+      align-self: flex-end;
+    }
+  }
+}
+
+p{
+text-align: center;
+}
+h2{
+  text-align: center;
+  padding-top: 20px;
+  color: hotpink;
+}
+
+
+//Footer ------------------------
+footer{
+  text-align: center;
+  color: grey;
+}

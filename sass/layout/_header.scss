@@ -1,0 +1,40 @@
+header{
+  position: fixed;
+  width: 100vw;
+  right: 5px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+  z-index: 100;
+  align-items:flex-start;
+
+}
+nav{
+  display: none;
+  top: 1px;
+  width: 95%;
+  margin: 0 15px;
+  .links{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    li{
+      background-color: lighten($color-accent, 20%);
+      width: 100%;
+      border-bottom: 1px solid $color-accent;
+      text-align: center;
+      padding: 10px 0;
+      margin-left: 10px;
+    }
+  }
+}
+// Header text
+h1{
+  @include fontFace-headers($family,$style: normal,$weight: normal);
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: left;
+  padding-left: 10px;
+  color: $color-dark;
+}
